@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0"?>
 <package >
   <metadata>
-    <id>CleanCode</id>
+    <id>CleanCode.10.0</id>
     <version>5.0.0.0</version>
     <title>CleanCode</title>
     <authors>Hadi Hariri, Matt Ellis, SuperJMN</authors>
