@@ -26,7 +26,8 @@
 #endregion
 
 using CleanCode.Features.TooManyChainedReferences;
-using JetBrains.ReSharper.Daemon;
+using JetBrains.DocumentModel;
+using JetBrains.ReSharper.Feature.Services.Daemon;
 using JetBrains.ReSharper.Psi.CSharp;
 
 [assembly: RegisterConfigurableSeverity(Highlighting.SeverityID, null,
@@ -44,6 +45,14 @@ namespace CleanCode.Features.TooManyChainedReferences
         public Highlighting(string toolTip)
         {
             tooltip = toolTip;
+        }
+
+        /// <summary>
+        /// Calculates range of a highlighting.
+        /// </summary>
+        public DocumentRange CalculateRange()
+        {
+            return new DocumentRange();
         }
 
         public string ToolTip

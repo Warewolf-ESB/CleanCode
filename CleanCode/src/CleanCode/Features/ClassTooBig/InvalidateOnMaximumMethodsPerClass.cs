@@ -29,14 +29,14 @@ using CleanCode.Settings;
 using JetBrains.Application.Settings;
 using JetBrains.DataFlow;
 using JetBrains.ProjectModel;
-using JetBrains.ReSharper.Daemon;
+using JetBrains.ReSharper.Daemon.Impl;
 
 namespace CleanCode.Features.ClassTooBig
 {
     [SolutionComponent]
     public class InvalidateOnMaximumMethodsPerClass
     {
-        public InvalidateOnMaximumMethodsPerClass(Lifetime lifetime, Daemon daemon, ISettingsStore settingsStore)
+        public InvalidateOnMaximumMethodsPerClass(Lifetime lifetime, DaemonImpl daemon, ISettingsStore settingsStore)
         {
             var maxDepth = settingsStore.Schema.GetScalarEntry((CleanCodeSettings s) => s.ClassTooBigMaximum);
             settingsStore.AdviseChange(lifetime, maxDepth, daemon.Invalidate);

@@ -29,14 +29,14 @@ using CleanCode.Settings;
 using JetBrains.Application.Settings;
 using JetBrains.DataFlow;
 using JetBrains.ProjectModel;
-using JetBrains.ReSharper.Daemon;
+using JetBrains.ReSharper.Daemon.Impl;
 
 namespace CleanCode.Features.TooManyChainedReferences
 {
     [SolutionComponent]
     public class InvalidateOnMaximumChainedCalls
     {
-        public InvalidateOnMaximumChainedCalls(Lifetime lifetime, Daemon daemon, ISettingsStore settingsStore)
+        public InvalidateOnMaximumChainedCalls(Lifetime lifetime, DaemonImpl daemon, ISettingsStore settingsStore)
         {
             var maxDepth = settingsStore.Schema.GetScalarEntry((CleanCodeSettings s) => s.TooManyChainedReferencesMaximum);
             settingsStore.AdviseChange(lifetime, maxDepth, daemon.Invalidate);

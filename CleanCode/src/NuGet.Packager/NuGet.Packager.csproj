@@ -65,9 +65,9 @@
     <Content Include="lib\CleanCode.8.2.pdb" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\CleanCode\CleanCode.8.2.csproj">
+    <ProjectReference Include="..\CleanCode\CleanCode.10.0.csproj">
       <Project>{5f96119c-2646-4298-ad40-30209e7e7bb2}</Project>
-      <Name>CleanCode.8.2</Name>
+      <Name>CleanCode.10.0</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

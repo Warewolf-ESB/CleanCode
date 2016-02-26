@@ -29,14 +29,14 @@ using CleanCode.Settings;
 using JetBrains.Application.Settings;
 using JetBrains.DataFlow;
 using JetBrains.ProjectModel;
-using JetBrains.ReSharper.Daemon;
+using JetBrains.ReSharper.Daemon.Impl;
 
 namespace CleanCode.Features.TooManyDependencies
 {
   [SolutionComponent]
   public class InvalidateOnMaximumDependenciesChange
   {
-    public InvalidateOnMaximumDependenciesChange(Lifetime lifetime, Daemon daemon, ISettingsStore settingsStore)
+    public InvalidateOnMaximumDependenciesChange(Lifetime lifetime, DaemonImpl daemon, ISettingsStore settingsStore)
     {
       var maxParams = settingsStore.Schema.GetScalarEntry((CleanCodeSettings s) => s.TooManyDependenciesMaximum);
       settingsStore.AdviseChange(lifetime, maxParams, daemon.Invalidate);

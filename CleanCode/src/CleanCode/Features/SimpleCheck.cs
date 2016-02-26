@@ -1,5 +1,5 @@
 using JetBrains.Application.Settings;
-using JetBrains.ReSharper.Daemon.Stages;
+using JetBrains.ReSharper.Feature.Services.Daemon;
 using JetBrains.ReSharper.Psi.Tree;
 
 namespace CleanCode.Features
