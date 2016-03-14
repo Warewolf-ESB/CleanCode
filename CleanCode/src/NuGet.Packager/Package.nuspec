@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0"?>
 <package >
   <metadata>
-    <id>CleanCode.10.0</id>
+    <id>Dev2.CleanCode</id>
     <version>5.0.0.0</version>
     <title>CleanCode</title>
     <authors>Hadi Hariri, Matt Ellis, SuperJMN</authors>
@@ -27,6 +27,6 @@
     <tags>clean code</tags>
   </metadata>
   <files>    
-    <file src="lib\CleanCode.10.0.dll" target="ReSharper\v10.0\plugins" />
+    <file src="lib\CleanCode.10.0.dll" target="DotFiles" />
   </files>
 </package>
